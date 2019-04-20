@@ -38,14 +38,11 @@ class Trip {
           this.driverId = driver.id;
           this.passengerId = passenger.id;
           store.trips.push(this);
-        }
-        driver() {
+       }
+       driver() {
           return store.drivers.find(driver => driver.id === this.driverId)
-        }
-        passenger() {
-          return store.passengers.find(
-                function(passenger) {
-                    return passenger.id === this.passengerId;
-                }.bind(this)
-        );}
+       }
+       passenger() {
+          return store.passengers.find(driver => driver.id === this.driverId)
+          }
 }
