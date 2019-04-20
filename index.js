@@ -6,15 +6,15 @@ let tripId = 0;
 
 class Driver {
     constructor(name) {
-        this.id = ++driverId;
-        this.name = name;
-        store.drivers.push(this);
+          this.id = ++driverId;
+          this.name = name;
+          store.drivers.push(this);
     }
      trips() {
-        return store.trips.filter(trip => trip.driverId === this.id)
+          return store.trips.filter(trip => trip.driverId === this.id)
      }
       passengers(){
-        return this.trips().map(trip => trip.passenger())
+          return this.trips().map(trip => trip.passenger())
       }
 }
 
@@ -28,7 +28,7 @@ class Passenger {
           return store.trips.filter(trip => trip.passengerId === this.id)
        }
       drivers(){
-        return this.trips().map(trip => trip.driver())
+          return this.trips().map(trip => trip.driver())
       }   
 }
 
@@ -41,7 +41,6 @@ class Trip {
         }
         driver() {
             return store.drivers.find(driver => driver.id === this.driverId)
-            
         }
         passenger() {
             return store.passengers.find(
