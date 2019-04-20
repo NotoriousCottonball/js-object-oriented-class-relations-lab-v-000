@@ -44,5 +44,5 @@ class Trip {
        }
        passenger() {
           return store.passengers.find(passenger => passenger.id === this.passengerId)
-          }
+       }
 }
